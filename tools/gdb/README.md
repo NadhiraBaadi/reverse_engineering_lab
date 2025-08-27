@@ -73,57 +73,60 @@ It’s clean, beginner-friendly, and inspired by **Beej’s Guide to GDB**, rewr
 
 
 
-###  Modifying Variables
-```gdb
-set variable x = 99
- TUI (Text UI Mode)
-Command	What it does
-layout split	Source + asm + cmd
-layout src	Source only
-layout asm	Assembly view
-layout reg	Add registers
-tui reg general	General-purpose regs
+### Changing Variables While Running
 
-Feels like a text-based IDE inside terminal.
-
-🛠 Misc Tools
-
-backtrace / bt → Show call stack
-
-attach <PID> / detach → Debug a running process
-
-info registers → Show registers
-
- Core Dumps
-ulimit -c unlimited    # enable core files
-gdb -tui -c core ./program
+| Command         | What It Does |
+|-----------------|--------------|
+| `set variable x = 99` | Set variable `x` to 99 |
+| `set (x = 99)` | Alternate syntax — same result |
+| | Useful for testing how your program reacts to different values — no recompiling! |
 
 
-Think of it as post-crash forensics 🕵️.
 
-⚡ Advanced
-gdb --interpreter=mi
+### Working with TUI (Text UI Mode)
+
+| Command         | What It Does |
+|-----------------|--------------|
+| `info win` | Show available windows |
+| `focus SRC / fs` | Focus the source window (`CMD`, `ASM`, `REG`, `next`, etc.) |
+| `layout split` | View source, assembly, and command views at once |
+| `layout src` | Just source code + command interface |
+| `layout asm` | Assembly view on top, command on bottom |
+| `layout reg` | Adds register window to your layout |
+| `winheight +3 / wh +3` | Increase window height |
+| `tui reg general` | Show general-purpose registers |
+| `tui reg float / system` | Show floating-point / system registers |
+| `tui reg next` | View the next page of registers |
+
+-> **Tip:** TUI mode feels like a text-based IDE — try it with:  
+```bash
+gdb -tui yourfile
+```
+### Misc Tools
+
+| Command          | What It Does |
+|------------------|--------------|
+| `backtrace` / `bt` | Show the call stack |
+| `attach <PID>`  | Attach GDB to a running process |
+| `detach`        | Detach from the attached process |
+| `info registers` | Display CPU registers |
+| `info all-registers` | Show extended register info |
 
 
-Run in machine-readable mode for building tools.
+### Core Dumps (Post-Crash Analysis)
 
- About this Cheat Sheet
+| Command               | What It Does |
+|-----------------------|--------------|
+| `ulimit -c unlimited` | Allow your system to generate core files |
+| `gdb -tui -c core ./program` | Load the core dump with the program |
 
-Compiled & rewritten by Nadhira Baadi
-
-Inspired by Beej’s Guide to GDB
-
-For learners in C programming, reverse engineering, and cybersecurity
-
-Focused on hands-on debugging
-
- Back to Repo Overview
-
+💡 **Note:** Core dumps are like crime scenes — use GDB to figure out what went wrong.
 
 ---
 
- Next step for you:  
+### Writing a GDB Front-End (Advanced)
 
-```bash
-mkdir -p tools/gdb
-nano tools/gdb/README.md
+| Command                 | What It Does |
+|-------------------------|--------------|
+| `gdb --interpreter=mi` | Start GDB in machine-readable mode for tooling |
+

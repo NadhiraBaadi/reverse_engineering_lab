@@ -9,63 +9,40 @@ This repo is designed for **learners, teams, and educators** who want a step-by-
 
 ##  Repository Structure
 reverse_engineering_lab/
-│── README.md # Overview (this file)
 
+│── README.md # Overview (this file)                            
 │── LICENSE # CC BY-NC 4.0 (educational use only)
-
 │── .gitignore # Ignore binaries, logs, junk files
-
 │
 ├── tools/ # Guides & cheat sheets for RE tools
-
 │ ├── gdb/
-
 │ │ ├── README.md # GDB basics + usage
-
 │ │ └── examples/ # Practice C binaries
-
 │ ├── radare2/README.md
-
 │ ├── ghidra/README.md
-
 │ ├── strace/README.md
-
 │ └── objdump/README.md
 │
 ├── roadmap/ # Learning roadmap
-
 │ ├── month1_fundamentals.md
-
 │ ├── month2_dynamic.md
-
 │ ├── month3_advanced.md
-
 │ └── phases.md # 90-day breakdown
 │
 ├── challenges/ # Practice & CTF challenges
-
 │ ├── month1/
-
 │ ├── month2/
-
 │ └── month3/
 │
 ├── resources/ # Learning materials
-
 │ ├── books.md
-
 │ ├── websites.md
-
 │ ├── youtube.md
-
 │ └── courses.md
 │
 └── writeups/ # Solutions & team writeups
-
 ├── picoctf_2025/
-
 ├── crackmes_one/
-
 └── internal_ctf/
 
 

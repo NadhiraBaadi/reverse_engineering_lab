@@ -75,16 +75,24 @@ reverse_engineering_lab/
 ### 1. Setup Environment
  Install **Linux VM** or **Windows VM**  
  Get essential tools:
+ 
    [Ghidra](https://ghidra-sre.org/)
+   
    [IDA Free](https://hex-rays.com/ida-free/)
+   
    [Radare2 / Cutter](https://rada.re/n/radare2.html)
+   
    [x64dbg](https://x64dbg.com/)
+   
    `strings`, `objdump`, `strace`, `ltrace`
 
 ### 2. Follow the Roadmap
 Start from [roadmap/](./roadmap/) — a **3-month guided plan**:
+
   **Month 1:** Assembly & static analysis  
+  
   **Month 2:** Debugging, unpacking, patching  
+  
  🔥 **Month 3:** Anti-debug, malware, full CTFs  
 
 ### 3. Practice with Tools

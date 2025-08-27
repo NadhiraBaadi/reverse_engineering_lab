@@ -120,9 +120,9 @@ gdb -tui yourfile
 | `ulimit -c unlimited` | Allow your system to generate core files |
 | `gdb -tui -c core ./program` | Load the core dump with the program |
 
-💡 **Note:** Core dumps are like crime scenes — use GDB to figure out what went wrong.
+ **Note:** Core dumps are like crime scenes — use GDB to figure out what went wrong.
 
----
+
 
 ### Writing a GDB Front-End (Advanced)
 

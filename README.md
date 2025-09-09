@@ -1,12 +1,10 @@
-#  Reverse Engineering Lab  
+##  Reverse Engineering Lab  
 
 Welcome, adventurer! This is not just a repo — it’s a **12-level campaign** where you’ll train, battle, and collect knowledge on your journey from novice to reverse engineering master.  
 
 Inside you’ll find quests, boss battles, tomes of knowledge, and the tools of the trade. Each level is a stage in your training, with its own theme and final showdown.  
-
 ---
-
-## 🎮 World Map (12 Levels)
+### 🎮 World Map (12 Levels)
 
 1. **Level 01 — Gate of Fundamentals**  
 2. **Level 02 — Dynamic Trials**  
@@ -26,10 +24,8 @@ Each level contains:
 - `boss_battle/` → A CTF-style challenge to conquer  
 - `tomes.md` → References, manuals, cheat sheets  
 - `README.md` → The quest log  
-
 ---
-
-##  Tools of the Trade
+###  Tools of the Trade
 All your weapons and artifacts live in `/tools`:  
 
 - **GDB** → Breakpoints, stack inspection, binary debugging  
@@ -41,29 +37,23 @@ Each tool comes with:
 - Cheatsheets  
 - Example binaries  
 - Usage notes  
-
 ---
-
-##  The Library
+###  The Library
 Curated resources are stored in `/resources`:  
 - `books.md` — Must-read RE & exploit dev texts  
 - `websites.md` — Blogs, guides, docs  
 - `youtube.md` — Channels like LiveOverflow, Gynvael, John Hammond  
 - `courses.md` — RPISEC, PWN College, and more  
-
 ---
-
-##  Guild Records
+###  Guild Records
 All writeups live in `/writeups`:  
 - `picoctf_2025/`  
 - `crackmes_one/`  
 - `internal_ctf/`  
 
 Share your victories, record your methods, and help the next adventurer.  
-
 ---
-
-##  Getting Started
+###  Getting Started
 
 1. **Setup your environment**  
    - Linux VM or WSL  
@@ -77,17 +67,14 @@ Share your victories, record your methods, and help the next adventurer.
 3. **Document your journey**  
    - Save notes in `tomes.md`  
    - Add your solutions in `/writeups`  
-
 ---
-
-##  License
+###  License
 This project is licensed under **CC BY-NC 4.0**.  
 -  Share & adapt for learning  
 -  No commercial use  
 - 📌 Please credit **Nadhira Baadi** when reusing content  
 
 ---
-
-## Motto  
+### Motto  
 “Learn Deeply, Share Freely.”  
-Knowledge grows when passed on. 🌱
+Knowledge grows when passed on. 

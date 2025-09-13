@@ -1,13 +1,15 @@
-You should have a good knowledge (at least the basics) of a programming language like C or C++.
+It is not strictly necessary to master a high-level programming language, but it is highly recommended to have at least a working knowledge of languages such as C, C++, or Python—depending on your goals. This foundation makes low-level concepts easier to understand, particularly when dealing with addresses, pointers, and memory layout.
+
 For the moment, this section gives you an overview of the essential C concepts you’ll need in reverse engineering.
 ## C Programming Basics
 ### Libraries
 We include libraries at the top of a program with `#include <lib.h>`.
 
-* **`<stdio.h>`** → input/output (`printf`, `scanf`, `fgets`, `puts`)
+* **`<stdio.h>`** → input/output (`printf`, `scanf`, `fgets`, `puts`,...)
 * **`<stdlib.h>`** → memory allocation, conversions, random numbers
-* **`<stdbool.h>`** → boolean type (`true`, `false`)
-* **`<time.h>`** → time functions (`time`, `clock`)
+* **`<stdbool.h>`** → boolean type (`true`, `false`,...)
+* **`<time.h>`** → time functions (`time`, `clock`,...)
+* **`<string.h>`** → string functions (`strlen`, `strcmp`,...)
 
 #### Insight
 
@@ -28,6 +30,8 @@ int age = 20;      // 4 bytes
 char grade = 'A';  // 1 byte
 float pi = 3.14;   // 4 bytes
 ```
+take a look :
+https://www.geeksforgeeks.org/c/variables-in-c/
 
 #### Insight
 
@@ -47,18 +51,26 @@ Text Segment → Compiled machine code (instructions).
 ---
 
 ###  The `main` Function
-
+You can get input in C in two common ways:
+ 1- Read interactively from standard input using the I/O functions in <stdio.h> like 'scanf()':
 ```c
 int main() {
+//your code here
     return 0;
 }
 ```
 or
+2- Accept input passed on the command line via argc/argv:
+argv : argument victor.
+argc : argument counter
 ```c
 int main(int argc, char* argv[]) {
+//your code here
     return 0;
 }
 ```
+take a look:
+https://www.geeksforgeeks.org/c/main-function-in-c/
 
 #### Insight
 
@@ -69,10 +81,20 @@ int main(int argc, char* argv[]) {
 
 ### Operators & Control Structures
 
+Operators :
+
 * **Arithmetic:** `+ - * / %`
 * **Comparison:** `== != < > <= >=`
 * **Logical:** `&& || !`
 * **Biwise:** `& | ~`
+  
+Control Structures :
+- there is multiple types of control types :
+   - if ... else
+   - whlie
+   - do ... while
+   - for
+ all these instructions change the flow of the program by executing some instuctions of the program and skiping others .
 
 ```c
 if (x > 0) {
@@ -81,6 +103,10 @@ if (x > 0) {
     printf("Not positive\n");
 }
 ```
+take a look :
+operations : https://www.geeksforgeeks.org/c/operators-in-c/
+Control Structures : https://www.youtube.com/watch?v=Led5aHdLoT4&list=PLBlnK6fEyqRgZq4a-SMViZr-V8jlvCioJ&ab_channel=NesoAcademy
+
 
 #### RE Insight
 
@@ -91,12 +117,24 @@ if (x > 0) {
 ---
 
 ### Functions
+We use modularity (functions/procedures) to make programs easier to write and understand. By breaking down a big problem into smaller sub-problems, each function handles one specific task.
+
+Every function has a return type (int, bool, char, etc.) depending on the value it returns.
+
+A function can also perform operations without returning a value — in that case, its type is void.
+
+<type_of_function> name_of_function(parameters){
+// your code 
+// returned value depending on the function's type 
+}
 
 ```c
 int addition(int a, int b) {
     return a + b;
 }
 ```
+take a look:
+https://www.geeksforgeeks.org/c/c-functions/
 
 #### Insight
 
@@ -224,3 +262,4 @@ int dequeue() { return (front <= rear) ? queue[front++] : -1; }
 ---
 
 With this guide, you’ll learn C **and** understand how it translates to memory and assembly — a solid foundation for reverse engineering.
+

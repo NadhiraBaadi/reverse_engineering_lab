@@ -108,7 +108,7 @@ operations : https://www.geeksforgeeks.org/c/operators-in-c/
 Control Structures : https://www.youtube.com/watch?v=Led5aHdLoT4&list=PLBlnK6fEyqRgZq4a-SMViZr-V8jlvCioJ&ab_channel=NesoAcademy
 
 
-#### RE Insight
+#### Insight
 
 * `if`/`else` compiles into `cmp` + `jz/jnz/jg/jl`.
 * `for`/`while` become conditional jumps.
@@ -157,11 +157,13 @@ https://www.geeksforgeeks.org/c/c-functions/
 ---
 
 ### Arrays & Matrices
-
+arays and matrices are contigous block of memory to store data , we reach useing indexes ( [i] in arrays and [i][j] in 2D matrices ) or using pointers *(arr + i).
 ```c
 int arr[5] = {1, 2, 3, 4, 5};
 int matrix[2][3] = { {1,2,3}, {4,5,6} };
 ```
+take a look :
+https://www.youtube.com/watch?v=55l-aZ7_F24&list=PLBlnK6fEyqRjoG6aJ4FvFU1tlXbjLBiOP&ab_channel=NesoAcademy
 
 #### Insight
 
@@ -173,11 +175,13 @@ int matrix[2][3] = { {1,2,3}, {4,5,6} };
 ---
 
 ### Strings
-
+strings are the same as arrays but with char type .
 ```c
 char name[20] = "Alice";
 printf("%s", name);
 ```
+take a look :
+https://www.youtube.com/watch?v=IlqiTmcK1Eg&list=PLBlnK6fEyqRhwQbYrTDZYJaB4z1YgsAPW&ab_channel=NesoAcademy
 
 #### Insight
 
@@ -188,12 +192,15 @@ printf("%s", name);
 ---
 
 ### Pointers
+pointers are special variables that point to a memory not a value , so they have an adress and contain adress , we declare it with * previous its name , and & it means the adress of the variable.
 
 ```c
 int x = 10;
 int *p = &x;
 printf("Value=%d, Address=%p", *p, p);
 ```
+take a look :
+https://youtu.be/f2i0CnUOniA?si=Bwwzl9HgFNwH4bPT
 
 #### Insight
 
@@ -219,6 +226,8 @@ int stack[SIZE], top = -1;
 void push(int val) { if (top < SIZE-1) stack[++top] = val; }
 int pop() { return (top >= 0) ? stack[top--] : -1; }
 ```
+take a look :
+https://www.youtube.com/watch?v=I37kGX-nZEI&list=PLBlnK6fEyqRgWh1emltdMOz8O2m5X3YYn&ab_channel=NesoAcademy
 
 #### Insight
 
@@ -236,6 +245,8 @@ int queue[SIZE], front=0, rear=-1;
 void enqueue(int val) { if (rear < SIZE-1) queue[++rear] = val; }
 int dequeue() { return (front <= rear) ? queue[front++] : -1; }
 ```
+take a look :
+https://www.youtube.com/watch?v=ypJwoz_SXTo&list=PLqM7alHXFySG6wgjVeEat_ouTIi0IBQ6D&ab_channel=GeeksforGeeks
 
 #### Insight
 
@@ -243,10 +254,6 @@ int dequeue() { return (front <= rear) ? queue[front++] : -1; }
 * Heap corruption → double free, use-after-free bugs.
 
 ---
-
-
----
-
 ## Exercises
 
 * **Exo 01:** Write a program adding two integers (user input).
@@ -262,4 +269,5 @@ int dequeue() { return (front <= rear) ? queue[front++] : -1; }
 ---
 
 With this guide, you’ll learn C **and** understand how it translates to memory and assembly — a solid foundation for reverse engineering.
+
 
